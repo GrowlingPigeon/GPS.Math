@@ -1,0 +1,14 @@
+{
+    "name": "Unity.GPS.Math",
+    "rootNamespace": "GrowlingPigeon.Math",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
