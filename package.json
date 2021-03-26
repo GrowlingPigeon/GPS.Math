@@ -1,0 +1,11 @@
+{
+	"name": "com.growlingpigeon.math",
+	"version": "1.0.0",
+	"displayName": "GPS Math",
+	"description": "Mathematics package for common math solutions",
+	"unity": "2020.2",
+	"author": {
+		"name": "Growling Pigeon",
+		"url": "http://growlingpigeon.com/"
+	}
+}
