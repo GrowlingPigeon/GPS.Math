@@ -23,7 +23,7 @@ namespace GrowlingPigeon.Math
     private readonly float value;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="Degrees"/> struct.
+    /// Initializes a new instance of the <see cref="Radians"/> struct.
     /// </summary>
     /// <param name="value">Value.</param>
     public Radians(float value)
@@ -32,7 +32,7 @@ namespace GrowlingPigeon.Math
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="Degrees"/> struct.
+    /// Initializes a new instance of the <see cref="Radians"/> struct.
     /// </summary>
     /// <param name="angle">Angle.</param>
     public Radians(Degrees angle)
@@ -41,7 +41,7 @@ namespace GrowlingPigeon.Math
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="Degrees"/> struct.
+    /// Initializes a new instance of the <see cref="Radians"/> struct.
     /// </summary>
     /// <param name="angle">Angle.</param>
     public Radians(Radians angle)

@@ -153,14 +153,14 @@ namespace GrowlingPigeon.Math2D
     /// </summary>
     private static readonly Dictionary<Nibble, Radians> RadianLookup = new Dictionary<Nibble, Radians>
     {
-      { (Nibble)CONST_LEFT,                 new Radians(0) },
-      { (Nibble)(CONST_UP | CONST_LEFT),    new Radians(Mathf.PI / 4) },
+      { (Nibble)CONST_RIGHT,                new Radians(0) },
+      { (Nibble)(CONST_UP | CONST_RIGHT),   new Radians(Mathf.PI / 4) },
       { (Nibble)CONST_UP,                   new Radians(Mathf.PI / 2) },
-      { (Nibble)(CONST_UP | CONST_RIGHT),   new Radians((3 * Mathf.PI) / 4) },
-      { (Nibble)CONST_RIGHT,                new Radians(Mathf.PI) },
-      { (Nibble)(CONST_DOWN | CONST_RIGHT), new Radians((5 * Mathf.PI) / 4) },
+      { (Nibble)(CONST_UP | CONST_LEFT),    new Radians((3 * Mathf.PI) / 4) },
+      { (Nibble)CONST_LEFT,                 new Radians(Mathf.PI) },
+      { (Nibble)(CONST_DOWN | CONST_LEFT),  new Radians((5 * Mathf.PI) / 4) },
       { (Nibble)CONST_DOWN,                 new Radians((3 * Mathf.PI) / 2) },
-      { (Nibble)(CONST_DOWN | CONST_LEFT),  new Radians((7 * Mathf.PI) / 4) }
+      { (Nibble)(CONST_DOWN | CONST_RIGHT), new Radians((7 * Mathf.PI) / 4) }
     };
 
     /// <summary>
@@ -183,8 +183,14 @@ namespace GrowlingPigeon.Math2D
     /// </summary>
     /// <param name="vector">Vector encoding direction.</param>
     public Direction2D(Vector2 vector)
-      : this(new Radians(vector))
     {
+      if (vector == Vector2.zero)
+      {
+        this.value = Nibble.Zero;
+        return;
+      }
+
+      this.value = new Direction2D(new Radians(vector)).value;
     }
 
     /// <summary>
