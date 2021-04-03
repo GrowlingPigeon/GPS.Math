@@ -1,6 +1,6 @@
 {
     "name": "Unity.GPS.Math2D",
-    "rootNamespace": "GrowlingPigeon.Math2D",
+    "rootNamespace": "GrowlingPigeonStudio.Math2D",
     "references": [
         "Unity.GPS.Math"
     ],

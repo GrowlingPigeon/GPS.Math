@@ -1,11 +1,11 @@
 // MIT licenced.
 
-using GrowlingPigeon.Math;
+using GrowlingPigeonStudio.Math;
 using UnityEngine;
 
 #nullable enable
 
-namespace GrowlingPigeon.Math2D
+namespace GrowlingPigeonStudio.Math2D
 {
   /// <summary>
   /// Extension methods for Vector2.

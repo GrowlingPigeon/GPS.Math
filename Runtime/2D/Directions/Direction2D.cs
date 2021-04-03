@@ -1,12 +1,12 @@
 // MIT licenced.
 
 using System.Collections.Generic;
-using GrowlingPigeon.Math;
+using GrowlingPigeonStudio.Math;
 using UnityEngine;
 
 #nullable enable
 
-namespace GrowlingPigeon.Math2D
+namespace GrowlingPigeonStudio.Math2D
 {
   /// <summary>
   /// Screen-space direction in 2D.
@@ -177,6 +177,16 @@ namespace GrowlingPigeon.Math2D
     /// Internal direction value.
     /// </summary>
     private readonly Nibble value;
+
+    /// <summary>
+    /// Gets whether this direction is diagonal.
+    /// </summary>
+    public bool IsDiagonal => !this.IsCardinal;
+
+    /// <summary>
+    /// Gets whether this direction is cardinal.
+    /// </summary>
+    public bool IsCardinal => this == Right || this == Up || this == Left || this == Down;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Direction2D"/> struct.

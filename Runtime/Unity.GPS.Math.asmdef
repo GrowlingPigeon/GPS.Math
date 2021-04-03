@@ -1,6 +1,6 @@
 {
     "name": "Unity.GPS.Math",
-    "rootNamespace": "GrowlingPigeon.Math",
+    "rootNamespace": "GrowlingPigeonStudio.Math",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

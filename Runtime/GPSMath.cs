@@ -4,7 +4,7 @@ using UnityEngine;
 
 #nullable enable
 
-namespace GrowlingPigeon.Math
+namespace GrowlingPigeonStudio.Math
 {
   /// <summary>
   /// GPS owned Math collection.

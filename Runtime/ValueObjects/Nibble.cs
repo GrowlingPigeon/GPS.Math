@@ -2,7 +2,7 @@
 
 #nullable enable
 
-namespace GrowlingPigeon.Math
+namespace GrowlingPigeonStudio.Math
 {
   /// <summary>
   /// Nibble (half of a byte).
