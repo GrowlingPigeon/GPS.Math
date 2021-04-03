@@ -181,7 +181,7 @@ namespace GrowlingPigeonStudio.Math2D
     /// <summary>
     /// Gets whether this direction is diagonal.
     /// </summary>
-    public bool IsDiagonal => !this.IsCardinal;
+    public bool IsDiagonal => !this.IsCardinal && this != None;
 
     /// <summary>
     /// Gets whether this direction is cardinal.
@@ -262,6 +262,24 @@ namespace GrowlingPigeonStudio.Math2D
     public static bool operator !=(Direction2D left, Direction2D right)
     {
       return !(left == right);
+    }
+
+    /// <summary>
+    /// Gets reversed direction.
+    /// </summary>
+    /// <returns>Reversed direction.</returns>
+    public Direction2D Reversed()
+    {
+      return this.RotateClockwise90().RotateClockwise90();
+    }
+
+    /// <summary>
+    /// Gets direction as <see cref="Vector2"/>.
+    /// </summary>
+    /// <returns>Vector.</returns>
+    public Vector2 ToVector2()
+    {
+      return this.ToRadians().ToVector2();
     }
 
     /// <summary>
@@ -366,42 +384,7 @@ namespace GrowlingPigeonStudio.Math2D
     /// <returns>Radians.</returns>
     public Radians ToRadians()
     {
-      if (this.value == UpRight.value)
-      {
-        return new Radians(Mathf.PI / 4);
-      }
-
-      if (this.value == Up.value)
-      {
-        return new Radians(Mathf.PI / 2);
-      }
-
-      if (this.value == UpLeft.value)
-      {
-        return new Radians((3 * Mathf.PI) / 4);
-      }
-
-      if (this.value == Left.value)
-      {
-        return new Radians(Mathf.PI);
-      }
-
-      if (this.value == DownLeft.value)
-      {
-        return new Radians((5 * Mathf.PI) / 4);
-      }
-
-      if (this.value == Down.value)
-      {
-        return new Radians((3 * Mathf.PI) / 2);
-      }
-
-      if (this.value == DownRight.value)
-      {
-        return new Radians((7 * Mathf.PI) / 4);
-      }
-
-      return new Radians(0);
+      return RadianLookup[this.value];
     }
 
     /// <summary>
